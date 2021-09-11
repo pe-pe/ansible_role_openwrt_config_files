@@ -1,0 +1,9 @@
+---
+- name: Converge
+  hosts: all
+  vars_files:
+    - vars.yml
+
+  roles:
+    - gekmihesg.openwrt
+    - ansible_role_openwrt_config_files

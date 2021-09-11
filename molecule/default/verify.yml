@@ -1,0 +1,20 @@
+---
+- name: Verify
+  hosts: all
+  gather_facts: false
+  vars_files:
+    - vars.yml
+
+  roles:
+    - role: gekmihesg.openwrt
+
+  tasks:
+    # files test
+    - name: Check whether files exists with proper permissions
+      stat:
+        path: "{{ item.dest }}"
+      register: openwrt_config_files_stat
+      failed_when:
+        - not openwrt_config_files_stat.stat.exists or
+          openwrt_config_files_stat.stat.mode != item.mode
+      loop: "{{ openwrt_config_files }}"

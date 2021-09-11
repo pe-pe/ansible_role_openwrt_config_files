@@ -1,6 +1,8 @@
 OpenWRT Config Files
 =========
 
+[![Role](https://img.shields.io/ansible/role/56215.svg)](https://galaxy.ansible.com/pe_pe/openwrt_config_files/)
+[![Quality](https://img.shields.io/ansible/quality/56215.svg)](https://galaxy.ansible.com/pe_pe/openwrt_config_files/)
 [![CI](https://github.com/pe-pe/ansible_role_openwrt_config_files/workflows/CI/badge.svg)](https://github.com/pe-pe/ansible_role_openwrt_config_files/actions)
 
 Ansible role that copies files to OpenWRT device.

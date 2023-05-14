@@ -1,6 +1,7 @@
 ---
 - name: Prepare
   hosts: all
+  gather_facts: false
 
   roles:
     - role: gekmihesg.openwrt
